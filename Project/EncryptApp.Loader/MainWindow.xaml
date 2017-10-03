@@ -1,0 +1,25 @@
+﻿<Window x:Class="EncryptApp.Loader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EncryptApp.Loader"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Password" SizeToContent="WidthAndHeight"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed"
+        Keyboard.PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <StackPanel Margin="20" FocusManager.FocusedElement="{Binding ElementName=textBoxPassword}">
+            <PasswordBox x:Name="textBoxPassword" Width="200"/>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button x:Name="buttonOK" Margin="0,0,10,0" Content="_OK" IsDefault="True" Width="100" Click="buttonOK_Click"/>
+                <Button x:Name="buttonCancel" Margin="10,0,0,0" Content="_Cancel" IsCancel="True" Width="100" Click="buttonCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid x:Name="panelOverlay" Background="LightGray" Opacity="0.5" Visibility="Hidden">
+            <TextBlock FontSize="20pt" FontWeight="Bold" Text="Loading..." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

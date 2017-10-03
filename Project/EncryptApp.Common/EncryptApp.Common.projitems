@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>beac27b9-b3ec-4d47-9402-2d4d5319e7a1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EncryptApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\Internal\BCrypt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\Internal\BCrypt.Extended.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\Internal\SaltParseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\StreamCryptoError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\StreamCryptoException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\StreamCryptoUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharedConstants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Cryptography\" />
+  </ItemGroup>
+</Project>
